@@ -1,0 +1,54 @@
+{
+  "name": "deploy-demo",
+  "version": "1.0.0",
+  "description": "CI CD server",
+  "main": "index.js",
+  "bin": {
+    "deploy": "./bin/deploy.js"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ci",
+    "cd",
+    "deploy"
+  ],
+  "author": "oyjiangchuan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oyjiangchuan/deploy-demo"
+  },
+  "bugs": {
+    "url": "https://github.com/oyjiangchuan/deploy-demo/issues"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "log4js": "^6.4.1",
+    "prompts": "^2.4.2",
+    "socket.io": "^4.4.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}
